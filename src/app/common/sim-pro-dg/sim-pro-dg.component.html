@@ -1,0 +1,23 @@
+<div>
+  <tr>
+    <td>  Comapny Name </td>
+    <td> | </td>
+    <td> Customer Company Name </td>
+    <td> | </td>
+    <td> Status </td>
+    <td> | </td>
+    <td> Type </td>
+  </tr>
+</div>
+
+<div *ngFor="let job of jobs; index as i; first as isFirst" [ngStyle]="{'background-color': job.StatusColour}">
+  <tr >
+    <td>{{job.CompanyName}}</td>
+    <td> | </td>
+    <td>{{job.CustomerCompanyName}}</td>
+    <td> | </td>
+    <td>{{job.StatusName}}</td>
+    <td> | </td>
+    <td>{{job.Type}}</td>
+  </tr>
+</div>
